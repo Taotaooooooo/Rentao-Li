@@ -1,0 +1,460 @@
+body{
+    padding: 0rem;
+    margin: 0rem;
+    background-color: #f1f1f3;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: Suisseecalintl;
+    src: url('fonts/SuisseEcalIntl-Medium.otf'),
+         url('fonts/SuisseEcalIntl-MediumItalic.otf');
+
+}
+
+@font-face {
+    font-family: FZLTZHJW;
+    src: url('fonts/FZLTZHJW.TTF'),
+
+}
+
+
+.burger-menu {
+
+    display: none;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Style for the three burger lines */
+.burger-menu div {
+
+    display: none;
+    width: 2rem;
+    height: 0.36rem;
+    background-color: black;
+    margin-top: 0.1846875rem;
+    margin-bottom: 0.1846875rem;
+    transition: all 0.3s ease;
+}
+
+.burger-menu div:first-child {
+    transition: transform 0.01s ease-in-out;
+}
+
+.burger-menu div:nth-child(2) {
+    transition: transform 0.01s ease-in-out;
+}
+
+.burger-menu div:last-child {
+    transition: transform 0.01s ease-in-out;
+}
+
+.burger-menu.active div:first-child {
+    transform: translateX(0.2rem);
+}
+
+.burger-menu.active div:last-child {
+    transform: translateX(-0.2rem);
+}
+
+/* Dropdown menu - initially hidden */
+.nav-dropdown {
+
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 5rem; /* Below header */
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f3;
+    transition: all 0.3s ease;
+    z-index: 100;
+    
+}
+
+/* Dropdown menu links */
+.nav-dropdown a {
+    
+    text-align: center;
+    display: block;
+    color: black;
+    font-family: Suisseecalintl, sans-serif;
+    font-size: 3.45rem;
+    text-decoration: none;
+}
+
+.nav-dropdown a:hover {
+
+    background-color: #f1f1f1;
+    font-style: italic;
+}
+
+.nav-dropdown a:focus {
+
+    background-color: #f1f1f1;
+    font-style: italic;
+}
+
+.nav-dropdown-button-box {
+
+    border-top: 1px solid #686868;
+    border-bottom: 1px solid #686868;
+}
+
+a:hover{
+
+    font-style: italic;
+}
+
+
+header{
+    
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #686868;
+}
+
+nav{
+
+    width: 88.5417%;
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.nav-button{
+
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.nav-button-box{
+
+    justify-content: center;
+    align-items: center;
+    width: 33.3333%;
+    display: flex;
+    height:100%;
+}
+
+.nav-button-box a {
+
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-family: Suisseecalintl, sans-serif;
+    font-size: 3.45rem;
+    line-height: 0;
+    color: black;      
+    text-decoration: none; 
+    transition: all 0.3s ease; 
+}
+
+.nav-button-box a:hover {
+
+    font-style: italic;
+}
+
+.nav-button-box a:focus {
+
+    font-style: italic;
+    outline: none;  /* Remove default focus outline */
+}
+
+.main-body {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 7.5rem); /* Ensures it takes up full height */
+}
+
+.main-body-wrapper {
+    flex-grow: 1;
+    min-height: 0;
+    overflow: scroll;
+}
+
+
+.main-body.work-page {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 7.5rem);
+    padding-bottom: 7.5rem;
+    top: 0;
+    bottom: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: visible;
+}
+
+.work{
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: white;
+}
+
+.work img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.work iframe{
+
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.main-body-wrapper{
+
+    border-right: 1px solid #686868;
+    border-left: 1px solid #686868;
+    height: auto;
+    width: 88.5417%;
+    display: flex;
+    position: relative;
+    overflow: scroll;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information-block.work-page {
+    
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row; /* Change from column to row */
+    justify-content: space-between; /* Evenly distribute columns */
+    align-items: flex-start;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0rem;
+    overflow: visible;
+}
+
+
+
+.information-content-block {
+
+    flex: 1; /* Each block takes equal space */
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+
+.information-content-block:nth-child(2) {
+
+    padding-bottom: 1.7rem;
+    border-left: 1px solid #686868;
+    border-right: 1px solid #686868;
+}
+
+.many-works-dispaly {
+
+    padding-top: 1.25rem;
+    padding-bottom: 1.7rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.many-works-wrapper {
+
+    width: calc(100% - 2.5rem);
+    display: flex;
+    flex-direction: column; /* Change from column to row */
+    gap: 1.25rem;
+    overflow: scroll;
+}
+
+.work{
+
+    width: auto;
+    aspect-ratio: 16 / 9;
+    background-color: white;
+}
+
+
+.grid-box {
+
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.grid-line {
+
+    width: calc(100% - 2.5rem);
+    border-bottom: 1px solid #686868;
+}
+
+p {
+
+    font-family: Suisseecalintl, sans-serif;
+    font-size: 0.8625rem;
+    line-height: 1.25rem;
+    margin: 0;
+    color: black;      
+    text-decoration: none; 
+}
+
+a {
+    text-decoration: none;
+  }
+
+.cv-subtitle {
+
+    text-transform: uppercase;     
+    font-style: italic;
+}
+
+.Chinese-Version{
+
+    font-size: 0.8rem;
+    font-family: FZLTZHJW;
+}
+
+.body-text-box {
+    
+    background-color: #0000;
+    border-bottom: 1px solid #686868;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    display: flex;
+}
+
+
+.background-lines {
+
+    z-index: -1;
+    justify-content: space-between;
+    position: absolute;
+    width: 88.54166666666666%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
+}
+
+.background-lines-block-one {
+
+    width: 33.33333333333333%;
+    height: 100%;
+    border-left: 1px solid #686868;
+    padding: 0;
+}
+
+.background-lines-block-two {
+
+    width: 33.33333333333333%;
+    height: 100%;
+}
+
+.background-lines-block-three {
+
+    border-right: 1px solid #686868;
+    width: 33.33333333333333%;
+    height: 100%;
+}
+
+
+footer{
+
+    z-index: 100;
+    cursor: auto;
+    background-color: #f1f1f3;
+    border-top: 1px solid #686868;
+    border-bottom: 1px solid #686868;
+    flex: 0 auto;
+    justify-content: center;
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 0;
+    display: flex;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    overflow: hidden;
+}
+
+/* 991px breakpoint: Hide nav and show burger */
+@media screen and (max-width: 991px) {
+    /* Hide default nav */
+    .nav-button {
+        display: none;
+    }
+
+    /* Show the burger menu */
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .burger-menu div {
+        display: flex;
+    }
+}
+
+/* 767px breakpoint: Change information-block to single column */
+@media screen and (max-width: 767px) {
+
+   
+    .information-block.work-page {
+        flex-direction: column; /* Change from column to row */    
+    }
+
+    .information-content-block {
+        width: calc(100% - 2.5rem);
+        padding-bottom: 0;
+    }
+    
+    .information-content-block:nth-child(2) {
+        border: none;
+        padding-bottom: 0;
+    }
+
+    .information-content-block:nth-child(3) {
+        padding-bottom: 0rem;
+    
+    }
+    
+    .grid-box{
+        display: none;
+    }
+   
+}
+
